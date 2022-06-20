@@ -45,17 +45,8 @@ const requestHandler = (req, res) => {
                 res.write('</body>')
                 res.write('</html>')
                 return res.end();
-
-                
-            })
-            
-
-            // res.write(`<h1>${data}</h1>`)
-            //  res.end(`<h1>${data}</h1>`);
-            //  
-
+            })  
         });
-
     }
     res.write('<html>')
     res.write('<head><title>my first Page from node.js</title></head>')
@@ -64,17 +55,17 @@ const requestHandler = (req, res) => {
     res.write('</body>')
     res.write('</html>')
     res.end();
-
 }
-
+//1st way for exports
 module.exports = {
     handler: requestHandler,
     someText: 'some hard coded text'
 }
-
+//2nd way for exports
 // module.exports.handler = requestHandler;
 // module.exports.someText = 'Some text';
 
+//3rd way for exports
 // exports.handler = requestHandler;
 // exports.someText = 'Some hard coded text';
 
